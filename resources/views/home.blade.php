@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('title')
+    لوحة التحكم برنامج الفواتير
+@endsection
 @section('css')
     <!--  Owl-carousel css-->
     <link href="{{URL::asset('assets/plugins/owl-carousel/owl.carousel.css')}}" rel="stylesheet" />
