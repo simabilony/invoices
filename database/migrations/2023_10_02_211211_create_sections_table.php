@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('Created_by', 999);
             $table->timestamps();
+            $table->text();
         });
     }
 
