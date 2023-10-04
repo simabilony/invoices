@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sections', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('section_name', 999);
-            $table->text('description')->nullable();
-            $table->string('Created_by', 999);
-            $table->timestamps();
+        Schema::table('sections', function (Blueprint $table) {
+            $table->text('sima')->after('id');
         });
     }
 
@@ -25,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sections');
+        Schema::table('sections', function (Blueprint $table) {
+            $table->dropColumn('sima');
+        });
     }
 };
